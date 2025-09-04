@@ -1,0 +1,161 @@
+:root {
+    --main-color: blue;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    width: 308px;
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black(0, 0, 0, 2),
+    -5px -5px 10px black(0, 0, 0, 2)
+}
+
+.output {
+    border: solid 2px var(--main-color);
+    height: 60px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.output input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 50px;
+    text-align: end;
+    padding-right: 20px;
+    color: var(--main-color);
+}
+
+.output input::placeholder {
+    color: var(--main-color);
+}
+
+.btns {
+    display: grid;
+    grid-template-coloums: repeat(4, 60px);
+    gap: 10px 15px;
+}
+
+.btns button {
+    border: solid 3px black;
+    outline: none;
+    height: 60px;
+    border-radius: 20%;
+    font-size: 25px;
+    color: var(--main-color);
+    background-color: lightskyblue;
+    box-shadow: 5px 5px 5px black(0, 0, 0, 2);
+}
+
+.btns button.sp {
+    background-color: var(--mai-color);
+    color: whitesmoke;
+}
+
+.btns button.equal {
+    width: 135px;
+    border-radius: 22px;
+}
+
+.appmenu {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    width: 25px;
+    gap: 5px;
+    margin-bottom: 10px;
+    transition: 0.8s; 
+}
+
+.icon span {
+    background-color: var(--main-color);
+    height: 5px;
+    width: 100%;
+    border-radius: 20px;
+    transition: 0.1s;
+}
+
+.menu {
+    padding: 10px;border-radius: 10px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    display: flex;
+    gap: 10px;
+    transform: scale(0);
+    transform-origin: top left;
+    transition: 0.3s;
+    box-shadow: 5px 5px 10px black(0, 0, 0, 2);
+}
+
+.menu.open {
+    transform: scale(1);
+}
+.menu div {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: solid 2px grey;
+}
+
+.menu div:nth-child(1) {
+    background-color: blue;
+}
+
+.menu div:nth-child(2) {
+    background-color: green;
+}
+
+.menu div:nth-child(3) {
+    background-color: red;
+}
+
+.menu div:nth-child(4) {
+    background-color: yellow;
+}
+
+.menu div:nth-child(5) {
+    background-color: purple;
+}
+
+body.blue {
+    --main-color: blue;
+}
+
+body.green {
+    --main-color: green;
+}
+
+body.red {
+    --main-color: red;
+}
+
+body.yellow {
+    --main-color: yellow;
+}
+
+body.purple {
+    --main-color: purple;
+}
